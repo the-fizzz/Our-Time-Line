@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!-- EDITING GUIDE: Search for 2020 /, 2021 /, etc. Photo slots: PHOTO SLOTS.
+       Final gallery: FINAL PHOTO AND VIDEO GALLERY. Birthday text: const letter.
+       Birthday video: assets/birthday-message.mp4. Music: BACKGROUND MUSIC FILE. -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <meta content="#210f21" name="theme-color"/>
+    <title>To My Bibijan ♡ | Our Love Time Line</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- BACKGROUND MUSIC FILE -->
+    <audio id="storySoundtrack" src="assets/one-day-the-distance-ends.mp3" preload="metadata" loop playsinline></audio>
+    <!-- OPENING LETTER AND MUSIC START -->
+    <section id="musicIntro" class="music-intro" role="dialog" aria-modal="true" aria-labelledby="musicIntroTitle">
+      <div class="music-intro-card">
+        <span class="music-heart" aria-hidden="true">♡</span>
+        <span class="eyebrow">A journey through us</span>
+        <h2 id="musicIntroTitle">Our Love TimeLine</h2>
+        <p>For my Bibijan. From our Hey to the day the distance ends.</p>
+        <div class="opening-letter" aria-hidden="false">
+          <div class="opening-letter-seal">✉</div>
+          <div class="opening-letter-paper">
+            <span class="opening-letter-tag">A secret letter you Arthi</span>
+            <p>To the girl who didn't know she'd become my forever — thank you for turning one little Hey into the most beautiful story of my life.</p>
+          </div>
+        </div>
+        <div class="music-choice">
+      <button type="button" id="beginMusic" class="btn">♫ Begin with music</button>
+      <button type="button" id="beginSilent" class="btn secondary">Continue quietly</button>
+    </div>
+        <p class="music-subtext">Featuring “One Day the Distance Ends” ·</p>
+        <p id="musicStartupError" class="music-error" role="status"></p>
+      </div>
+    </section>
+    <div class="music-dock" id="musicDock" hidden aria-label="Background music controls">
+      <button type="button" id="musicToggle" aria-label="Play background music" title="Play or pause music">▶</button>
+      <div class="music-name"><strong>One Day the Distance Ends</strong><span id="musicState" class="music-status">Paused</span></div>
+      <label for="musicVolume">Volume</label>
+      <input id="musicVolume" type="range" min="0" max="100" value="40" aria-label="Music volume"/>
+    </div>
+    <div class="progress" id="progress"></div>
+    <div aria-hidden="true" class="stars"></div>
+    <nav class="topbar"><span class="brand">For You Arthi ♡</span><a href="#journey">OUR STORY ↓</a></nav>
+    <!-- HERO / OPENING SCREEN -->
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow">My little universe, just for you</div>
+        <h1>Our love<br/><em>story.</em></h1>
+        <p>There is millions way to began stories. Ours began with a simple message "Hey...". And somehow, it became the story of us.</p>
+        <a class="btn" href="#journey">Begin our journey <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="ornament"></div>
+        <div class="orb one"></div>
+        <div class="orb two"></div>
+        <div class="original-hero-duo"><img class="hero-fizz" src="assets/fizz-original.png" alt="Fizz — original illustration"/><img class="hero-arthi" src="assets/arthi-original.png" alt="Arthi — original illustration"/></div>
+      </div>
+      <div class="scroll-hint">Scroll to discover ♡</div>
+    </header>
+    <!-- STORY INTRODUCTION -->
+    <section class="intro reveal" id="journey">
+      <span class="eyebrow">2020 — 2026</span>
+      <h2>Every chapter led<br/>me closer <em>to you.</em></h2>
+      <p>From the first "Hey...", to a quiet little ring, to the 5000 km between two countries — this is the story of us.</p>
+    </section>
+    <!-- LIVE LOVE COUNTER -->
+    <section class="love-counter reveal" id="love-counter">
+      <div class="counter-card">
+        <span class="eyebrow">A love that keeps grow stronger than ever</span>
+        <h2>Since our first meeting, it has been</h2>
+        <div class="counter-number" id="loveDays">0</div>
+        <p class="counter-copy">days since December 16, 2021 ♡</p>
+        <div class="counter-stats">
+          <div><strong id="loveYears">0</strong><span>years</span></div>
+          <div><strong id="loveMonths">0</strong><span>months</span></div>
+          <div><strong id="loveHours">0</strong><span>hours today</span></div>
+        </div>
+        <div class="mini-counter-inline"><span class="pill">First meeting · Dec 16, 2021</span><span class="pill">Long distance since · May 15, 2023</span></div>
+      </div>
+    </section>
+    <main aria-label="Our love story from 2020 to our future together" class="timeline">
+      <!-- 2020 / FIRST MESSAGES -->
+      <section class="chapter" id="y2020">
+        <div class="story reveal">
+          <div class="year">2020</div>
+          <span class="eyebrow">Chapter one</span>
+          <h3>The first hello</h3>
+          <p>One ordinary Messenger message. A few simple conversations. Then months of silence. Neither of us knew how much that little Hey would one day mean.</p>
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2020">
+            <div class="ambient ambient-a"></div>
+            <div class="ambient ambient-b"></div>
+            <div class="two-portraits">
+              <div class="portrait-person portrait-fizz"><img alt="Fizz, in his dark coat and swept-back hairstyle" src="assets/fizz-original.png"/><span>Fizz</span></div>
+              <div class="portrait-person portrait-arthi"><img alt="Arthi, in her red saree" src="assets/arthi-original.png"/><span>Arthi</span></div>
+            </div>
+            <div class="chat-note chat-left">Hey…</div>
+            <div class="chat-note chat-right">What?</div>
+            <div class="scene-headline">It began with a message.</div>
+          </div>
+          <span class="scene-label">The first text </span>
+        </div>
+      </section>
+      <!-- 2021 / FIRST MEETING AND RING -->
+      <section class="chapter" id="y2021">
+        <div class="story reveal">
+          <div class="year">2021</div>
+          <span class="eyebrow">Chapter two</span>
+          <h3>Finally, face to face</h3>
+          <p>We start texting again during my exams. Our conversations grew into something real. I told you my wishes and your answer was positive, before we had even met. On December 16, we finally saw each other in person. Days later, in a quiet restaurant named Kutumbari, I gave you a little ring that held a very big promise.</p>
+          <span class="date">December 16 · Our first meeting ・ At Degree College </span>
+          <!-- PHOTO SLOTS / replace the image files at the exact src paths below -->
+          <div class="gallery memory-gallery" aria-label="2021 photo memories">
+            <button class="memory-tile" type="button" data-year="2021" data-photo="1" aria-label="Open 2021 memory 1"><img src="image/1st shelfi.jpg" alt="Our 2021 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2021" data-photo="2" aria-label="Open 2021 memory 2"><img src="image/photo of rings.jpg" alt="Our 2021 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2021" data-photo="3" aria-label="Open 2021 memory 3"><img src="image/photo of her.jpg" alt="Our 2021 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2021">
+            <div class="back-light"></div>
+            <div class="meeting-date">16 · DEC · 2021</div>
+            <div class="two-portraits">
+              <div class="portrait-person portrait-fizz"><img alt="Mustafiz, in his dark coat and swept-back hairstyle" src="assets/fizz-original.png"/><span>Fizz</span></div>
+              <div class="portrait-person portrait-arthi"><img alt="Arthi, in her red saree" src="assets/arthi-original.png"/><span>Arthi</span></div>
+            </div>
+            <div class="center-heart">
+              <svg aria-hidden="true" viewbox="0 0 70 65">
+                <path d="M35 58C8 39 3 26 8 16 16 0 30 8 35 16 40 8 54 0 62 16 67 26 62 39 35 58Z" fill="none" stroke="currentColor" stroke-width="2.2"></path>
+              </svg>
+            </div>
+            <div class="ring-icon">
+              <svg aria-hidden="true" viewbox="0 0 92 120">
+                <path d="M25 45L46 9L67 45Z" fill="#b3e9e9" fill-opacity=".28" stroke="#efdfd2" stroke-width="3"></path>
+                <path d="M25 45H67L46 61Z" fill="#ace2e7" fill-opacity=".34" stroke="#f7ece2" stroke-width="3"></path>
+                <ellipse cx="46" cy="82" fill="none" rx="26" ry="26" stroke="#f2c78f" stroke-width="10"></ellipse>
+                <path d="M25 45L30 52M67 45L62 52" stroke="#d9aa79" stroke-width="6"></path>
+              </svg>
+            </div>
+            <div class="scene-headline">The first hello, face to face.</div>
+          </div>
+          <span class="scene-label">December 16, 2021 · The first meeting &amp; the little ring</span>
+        </div>
+      </section>
+      <!-- 2022 / KUSHTIA AND DATING MEMORIES -->
+      <section class="chapter" id="y2022">
+        <div class="story reveal">
+          <div class="year">2022</div>
+          <span class="eyebrow">Chapter three</span>
+          <h3>Our little secret</h3>
+          <p>Kushtia, January. A rickshaw ride to the river side park named Renwik (maybe). Sitting together on a bench beside the river. So many dates, so many photographs, and a world that was ours before anyone else knew. Every  boy goes to meet his girl but you came to meet me. </p>
+          <!-- PHOTO SLOTS / replace the image files at the exact src paths below -->
+          <div class="gallery memory-gallery" aria-label="2022 photo memories"><button class="memory-tile" type="button" data-year="2022" data-photo="1" aria-label="Open 2022 memory 1"><img src="Our little secret/669983447394099.jpg" alt="Our 2022 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2022" data-photo="2" aria-label="Open 2022 memory 2"><img src="Our little secret/IMG_1759.JPG" alt="Our 2022 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2022" data-photo="3" aria-label="Open 2022 memory 3"><img src="Our little secret/IMG_1760.JPG" alt="Our 2022 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2022" data-photo="4" aria-label="Open 2022 memory 4"><img src="Our little secret/IMG_1761.JPG" alt="Our 2022 memory 4" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 04<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+          <div class="gallery memory-gallery" aria-label="2022 photo memories"><button class="memory-tile" type="button" data-year="2022" data-photo="1" aria-label="Open 2022 memory 1"><img src="Our little secret/IMG_4631.JPG" alt="Our 2022 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2022" data-photo="2" aria-label="Open 2022 memory 2"><img src="Our little secret/IMG_4635.JPG" alt="Our 2022 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2022" data-photo="3" aria-label="Open 2022 memory 3"><img src="Our little secret/IMG_4636.JPG" alt="Our 2022 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2022" data-photo="4" aria-label="Open 2022 memory 4"><img src="Our little secret/584092543496666.mp4" alt="Our 2022 memory 4" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 04<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+
+          <p class="smallnote">Photo spots are ready for your 2022 memories.</p>
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2022">
+            <div class="sun-moon"></div>
+            <div class="hill hill-one"></div>
+            <div class="hill hill-two"></div>
+            <div class="river"></div>
+            <div class="mini-pair">
+              <div class="portrait-person portrait-fizz"><img alt="Fizz, in his dark coat and swept-back hairstyle" src="assets/fizz-original.png"/><span>Fizz</span></div>
+              <div class="portrait-person portrait-arthi"><img alt="Arthi, in her red saree" src="assets/arthi-original.png"/><span>Arthi</span></div>
+            </div>
+            <div class="rickshaw-icon">
+              <svg aria-hidden="true" viewbox="0 0 250 160">
+                <circle cx="48" cy="130" fill="none" r="23" stroke="#c6a8a3" stroke-width="5"></circle>
+                <circle cx="204" cy="130" fill="none" r="23" stroke="#c6a8a3" stroke-width="5"></circle>
+                <path d="M48 130L97 78H170L204 130H48L87 109 109 130M150 130L170 78M69 75L94 75" fill="none" stroke="#ecd0bc" stroke-width="5"></path>
+                <path d="M105 78V35Q143 3 175 35V78" fill="none" stroke="#d7a4ab" stroke-width="10"></path>
+                <path d="M112 77V38Q146 12 168 39V77Z" fill="#7d475b" fill-opacity=".6" stroke="#f2c2b0" stroke-width="2"></path>
+                <path d="M175 80L216 95 227 130" fill="none" stroke="#e2b18b" stroke-width="5"></path>
+                <path d="M92 80V55H111" fill="none" stroke="#d3a4a4" stroke-width="5"></path>
+              </svg>
+            </div>
+            <div class="bench-icon">
+              <svg aria-hidden="true" viewbox="0 0 160 115">
+                <path d="M28 44V75M132 44V75M27 55H133M23 40Q80 30 137 40V53H23ZM23 61H137V72H23ZM40 72L33 107M120 72L127 107" fill="none" stroke="#c7a185" stroke-linejoin="round" stroke-width="8"></path>
+              </svg>
+            </div>
+            <div class="scene-headline">Era of Our Secret Dating</div>
+          </div>
+          <span class="scene-label">A rickshaw ride, a riverside bench, and our secret dates </span>
+        </div>
+      </section>
+      <!-- 2023 / JAPAN DEPARTURE AND CONNECTION -->
+      <section class="chapter" id="y2023">
+        <div class="story reveal">
+          <div class="year">2023</div>
+          <span class="eyebrow">Chapter four</span>
+          <h3>One hug. Two countries.</h3>
+          <p>That quiet evening, I visited your home, met your family for the first time, and hugged you for the first time. Then the saddest part of this time line so far — my journey to Japan. The distance began, but our story didn't stop, love grows stronger.</p>
+          <span class="date">May 15 · The move to Japan</span>
+          <!-- PHOTO SLOTS / replace the image files at the exact src paths below -->
+          <div class="gallery memory-gallery" aria-label="2023 photo memories"><button class="memory-tile" type="button" data-year="2023" data-photo="1" aria-label="Open 2023 memory 1"><img src="ch4/IMG-20230516-WA0004.jpg" alt="Our 2023 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2023" data-photo="2" aria-label="Open 2023 memory 2"><img src="ch4/received_1220795495235870.jpeg" alt="Our 2023 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2023" data-photo="3" aria-label="Open 2023 memory 3"><img src="ch4/HJCRE1718.JPG" alt="Our 2023 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2023">
+            <div class="farewell-glow"></div>
+            <div class="mini-pair">
+              <div class="portrait-person portrait-fizz"><img alt="Fizz, in his dark coat and swept-back hairstyle" src="assets/fizz-original.png"/><span>Fizz</span></div>
+              <div class="portrait-person portrait-arthi"><img alt="Arthi, in her red saree" src="assets/arthi-original.png"/><span>Arthi</span></div>
+            </div>
+            <div class="dotted-route"></div>
+            <div class="plane-icon">
+              <svg aria-hidden="true" viewbox="0 0 170 86">
+                <path d="M12 48L68 54 144 15Q160 4 163 16L101 65 112 78 99 83 79 67 30 69 15 58Z" fill="#f1d8c4"></path>
+                <path d="M68 54L83 21 97 16 97 61" fill="#b38a9e"></path>
+                <path d="M12 48L77 59" stroke="#e2a99c" stroke-width="2"></path>
+              </svg>
+            </div>
+            <div class="location-label location-left">BANGLADESH</div>
+            <div class="location-label location-right">JAPAN</div>
+            <div class="route-map" aria-hidden="true">
+              <div class="route-pin route-bd">Bangladesh</div>
+              <div class="route-pin route-jp">Japan</div>
+              <svg viewBox="0 0 230 140">
+                <path class="route-line" d="M34 102C58 96 72 88 92 74C116 58 132 44 157 35C172 29 185 27 198 30"></path>
+                <circle class="route-dot" cx="33" cy="103" r="5"></circle>
+                <circle class="route-dot" cx="198" cy="30" r="5"></circle>
+              </svg>
+              <div class="route-heart">♡</div>
+            </div>
+            <div class="scene-headline">One hug. Two countries.</div>
+          </div>
+          <span class="scene-label">The first hug, then the airport</span>
+        </div>
+      </section>
+      <!-- 2024 / LONG DISTANCE AND FAMILY -->
+      <section class="chapter" id="y2024">
+        <div class="story reveal">
+          <div class="year">2024</div>
+          <span class="eyebrow">Chapter five</span>
+          <h3>Across two timezone</h3>
+          <p>Late-night conversations. Different clocks, the same hearts. And the year I officially told my family about you. They were surprised — and then happy to see the person who had become so important to me.</p>
+          <!-- PHOTO SLOTS / replace the image files at the exact src paths below -->
+          <div class="gallery memory-gallery" aria-label="2024 photo memories"><button class="memory-tile" type="button" data-year="2024" data-photo="1" aria-label="Open 2024 memory 1"><img src="ch5/IMG_1987.jpg" alt="Our 2024 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2024" data-photo="2" aria-label="Open 2024 memory 2"><img src="ch5/IMG_3031.PNG" alt="Our 2024 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2024" data-photo="3" aria-label="Open 2024 memory 3"><img src="ch5/PHOTO-2026-04-08-03-00-41.jpg" alt="Our 2024 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2024">
+            <div class="time-label label-tokyo">TOKYO <span>00:00</span></div>
+            <div class="time-label label-dhaka">DHAKA <span>21:00</span></div>
+            <div class="two-portraits">
+              <div class="portrait-person portrait-fizz"><img alt="Fizz, in his dark coat and swept-back hairstyle" src="assets/fizz-original.png"/><span>Fizz</span></div>
+              <div class="portrait-person portrait-arthi"><img alt="Arthi, in her red saree" src="assets/arthi-original.png"/><span>Arthi</span></div>
+            </div>
+            <div class="thread-line"></div>
+            <div class="center-heart">
+              <svg aria-hidden="true" viewbox="0 0 70 65">
+                <path d="M35 58C8 39 3 26 8 16 16 0 30 8 35 16 40 8 54 0 62 16 67 26 62 39 35 58Z" fill="none" stroke="currentColor" stroke-width="2.2"></path>
+              </svg>
+            </div>
+            <div class="scene-headline">Different clocks. Same heart.</div>
+          </div>
+          <span class="scene-label">The calls, the time difference, and telling my family</span>
+        </div>
+      </section>
+      <!-- 2025 / ENGAGEMENT AND FACETIME -->
+      <section class="chapter" id="y2025">
+        <div class="story reveal">
+          <div class="year">2025</div>
+          <span class="eyebrow">Chapter six</span>
+          <h3>The promise of forever</h3>
+          <p>More FaceTime memories, more little pieces of everyday life shared across the distance. On April 1, our families came together in Bangladesh while I joined by video call from Japan. We're officialy engaged. A promise that felt closer than ever.</p>
+          <span class="date">April 1, 2025 · Our engagement</span>
+          <!-- PHOTO SLOTS / replace the image files at the exact src paths below -->
+          <div class="gallery memory-gallery" aria-label="2025 photo memories"><button class="memory-tile" type="button" data-year="2025" data-photo="1" aria-label="Open 2025 memory 1"><img src="ch6/att.9QKTAoB6_4zwgCd8I3fI_fkcrxEsObDv4fhpBFSEqNw.JPG" alt="Our 2025 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2025" data-photo="2" aria-label="Open 2025 memory 2"><img src="ch6/IMG_3641.PNG" alt="Our 2025 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2025" data-photo="3" aria-label="Open 2025 memory 3"><img src="ch6/IMG_3023.PNG" alt="Our 2025 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2025" data-photo="4" aria-label="Open 2025 memory 4"><img src="ch6/att.TUgrMwod4CzgfgPiai9aiv6_suMfP660nVTDzr2KPcw.MP4" alt="Our 2025 memory 4" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 04<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+          
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2025">
+            <div class="call-ui">
+              <div class="call-info">VIDEO CALL <span>♡</span></div>
+              <div class="call-people">
+                <div class="portrait-person portrait-fizz"><img alt="Fizz, in his dark coat and swept-back hairstyle" src="assets/fizz-original.png"/><span>In Japan</span></div>
+                <div class="portrait-person portrait-arthi"><img alt="Arthi, in her red saree" src="assets/arthi-original.png"/><span>In Bangladesh</span></div>
+              </div>
+              <div class="call-controls"><span>◌</span><span>♡</span><span>◌</span></div>
+            </div>
+            <div class="ring-icon">
+              <svg aria-hidden="true" viewbox="0 0 92 120">
+                <path d="M25 45L46 9L67 45Z" fill="#b3e9e9" fill-opacity=".28" stroke="#efdfd2" stroke-width="3"></path>
+                <path d="M25 45H67L46 61Z" fill="#ace2e7" fill-opacity=".34" stroke="#f7ece2" stroke-width="3"></path>
+                <ellipse cx="46" cy="82" fill="none" rx="26" ry="26" stroke="#f2c78f" stroke-width="10"></ellipse>
+                <path d="M25 45L30 52M67 45L62 52" stroke="#d9aa79" stroke-width="6"></path>
+              </svg>
+            </div>
+            <div class="engagement-date">APRIL 1, 2025</div>
+            <div class="scene-headline">The promise of forever.</div>
+          </div>
+          <span class="scene-label">April 1, 2025 · Our engagement</span>
+        </div>
+      </section>
+      <!-- 2026 / BIRTHDAY -->
+      <section class="chapter" id="y2026">
+        <div class="story reveal">
+          <div class="year">2026</div>
+          <span class="eyebrow">Chapter seven</span>
+          <h3>Happy birthday,<br/>Bibijan</h3>
+          <p> Biggest thanks to your mother for giving birth to my wifeee. </p>
+          <span class="date">November 15 · Your Birthday but Special for Me </span>
+          <!-- PHOTO SLOTS / replace the image files at the exact src paths below -->
+          <div class="gallery memory-gallery" aria-label="2026 photo memories"><button class="memory-tile" type="button" data-year="2026" data-photo="1" aria-label="Open 2026 memory 1"><img src="ch7/IMG_6883.JPG" alt="Our 2026 memory 1" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 01<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2026" data-photo="2" aria-label="Open 2026 memory 2"><img src="ch7/att.fxAv8-q2-y5_PScXB-ozwg5eOoXKS4-I3RI4-ezzB6o.JPG" alt="Our 2026 memory 2" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 02<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button><button class="memory-tile" type="button" data-year="2026" data-photo="3" aria-label="Open 2026 memory 3"><img src="ch7/copy_3C572A20-68F6-40BD-9592-E08A82628E0C.MOV" alt="Our 2026 memory 3" loading="lazy"/><span class="memory-placeholder"><span class="memory-icon">♡</span><span>Memory 03<small>Add your photo</small></span></span><span class="memory-zoom">View memory ↗</span></button></div>
+        </div>
+        <div class="scene reveal scene2d">
+          <div class="story-stage scene-2026">
+            <div class="couple-picture original-finale-duo"><img src="assets/fizz-original.png" alt="Fizz — original illustration"/><img src="assets/arthi-original.png" alt="Arthi — original illustration"/></div>
+            <div class="cake-icon">
+              <svg aria-hidden="true" viewbox="0 0 190 170">
+                <ellipse cx="96" cy="145" fill="#d8acb5" fill-opacity=".36" rx="82" ry="12"></ellipse>
+                <rect fill="#edc6bf" height="63" rx="9" stroke="#ffd7c2" stroke-width="3" width="122" x="35" y="77"></rect>
+                <path d="M35 92Q55 111 75 92Q95 111 115 92Q135 110 157 92V81Q95 71 35 81Z" fill="#fff1e5"></path>
+                <rect fill="#e6a0a9" height="41" rx="4" width="12" x="88" y="40"></rect>
+                <path d="M94 37Q80 23 93 13Q108 28 94 37Z" fill="#ffce86"></path>
+                <path d="M40 120H152" stroke="#cb8f9d" stroke-width="3"></path>
+              </svg>
+            </div>
+            <div class="center-heart">
+              <svg aria-hidden="true" viewbox="0 0 70 65">
+                <path d="M35 58C8 39 3 26 8 16 16 0 30 8 35 16 40 8 54 0 62 16 67 26 62 39 35 58Z" fill="none" stroke="currentColor" stroke-width="2.2"></path>
+              </svg>
+            </div>
+            <div class="scene-headline">Happy birthday, Bibijan ♡</div>
+          </div>
+          <span class="scene-label">The birthday surprise</span>
+        </div>
+      </section>
+    </main>
+    <!-- BIRTHDAY GIFT -->
+    <section class="ending" id="surprise">
+      <div class="eyebrow">One last surprise</div>
+      <h2>Our favorite chapter<br/>is still <em>ahead of us.</em></h2>
+      <p>For all our yesterdays, and all our tomorrows.</p>
+      <button aria-label="Open your birthday gift" class="gift" id="openGift">🎁</button>
+      <button class="btn" id="openGiftBtn">Open the massage box ♡</button>
+      <div class="endline">Happy birthday, my Bibijan. Our story has just began.</div>
+      
+    </section>
+    <!-- FINAL PHOTO AND VIDEO GALLERY -->
+    <section class="memory-vault" id="all-memories" aria-labelledby="vaultTitle">
+      <div class="vault-intro reveal">
+        <span class="eyebrow">A thousand little moments</span>
+        <h2 id="vaultTitle">All our <em>memories.</em></h2>
+        <p>Some moments are too precious to choose between. Here's a home for all our photographs, video calls, and little videos — every piece of our story.</p>
+        <div class="vault-toolbar"><label class="btn" for="vaultPick">♡ Preview photos & videos</label><input id="vaultPick" type="file" accept="image/*,video/*" multiple hidden aria-label="Choose photos and videos"/></div>
+      </div>
+      <div class="vault-empty" id="vaultEmpty"><strong>Our favorite moments belong here ♡</strong><span>Your gallery is ready whenever you are. Add photos and videos from your computer — there's no fixed number of slots.</span></div>
+      <div class="vault-media" id="vaultMedia" aria-live="polite"></div>
+    </section>
+    <!-- UNDER THE SAME SKY -->
+    <section class="sky-chapter reveal same-sky-anchor" id="same-sky" aria-labelledby="skyTitle">
+      <span class="eyebrow">Under the same sky</span>
+      <h2 id="skyTitle">Different skies, <em>one future.</em></h2>
+      <p>Even when night found us in different countries, we were still looking at the same sky and dreaming about the same home.</p>
+      <div class="sky-board">
+        <button type="button" class="star-node star-fizz" id="skyFizz" aria-label="Fizz star"><span>Fizz</span></button>
+        <button type="button" class="star-node star-arthi" id="skyArthi" aria-label="Bibijan star"><span>Bibijan</span></button>
+        <div class="sky-line" aria-hidden="true"></div>
+        <div class="sky-message" id="skyMessage">Tap the stars ♡</div>
+      </div>
+    </section>
+    <!-- MARRIAGE COMING SOON -->
+    <section class="marriage-chapter" id="marriage" aria-labelledby="marriage-title">
+      <div class="marriage-ambient marriage-ambient-a" aria-hidden="true"></div>
+      <div class="marriage-ambient marriage-ambient-b" aria-hidden="true"></div>
+      <div class="marriage-sparkles" aria-hidden="true">✧ &nbsp; ♡ &nbsp; ✧</div>
+      <div class="eyebrow reveal">The next chapter · Insha’Allah</div>
+      <h2 id="marriage-title" class="serif reveal">Marriage <em>Coming Soon</em></h2>
+      <p class="marriage-quote reveal">From first Hey to forever —<br>the best is yet to come.</p>
+      <figure class="marriage-portrait-frame reveal"><img src="assets/our-future-together.png" alt="Our illustrated future together — Fizz in his black coat and Arthi in her red sari, surrounded by blossoms" loading="lazy"/></figure>
+      <div class="marriage-portrait-caption reveal">One day, no more miles between us. ♡</div>
+      <p class="marriage-ending reveal">Soon, Insha’Allah, our forever begins. ♡</p>
+      <button type="button" class="btn promise-trigger reveal" id="openPromise">Open our future promise ♡</button>
+      <a href="#top" class="btn secondary reveal">↺ Relive our journey</a>
+    </section>
+    <div class="footer">MADE WITH LOVE · 2026 ♡</div>
+    <!-- BIRTHDAY LETTER AND VIDEO -->
+    <div aria-labelledby="letterTitle" aria-modal="true" class="modal" id="letterModal" role="dialog">
+      <div class="modal-card">
+        <button aria-label="Close letter" class="close" id="closeModal">×</button>
+        <div class="antique-envelope" id="letterEnvelope" aria-hidden="true">
+          <div class="envelope-back"></div>
+          <div class="envelope-paper"><span>For my Bibijan</span><i>♡</i></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="wax-seal">♡</div>
+          <div class="envelope-caption">A letter, just for you…</div>
+        </div>
+        <div class="antique-paper" id="letterPaper" hidden>
+          <span class="eyebrow">A letter from my heart</span>
+          <h2 id="letterTitle">To my Bibijan ♡</h2>
+          <div class="letter-ornament" aria-hidden="true">❧</div>
+          <div aria-live="off" class="letter" id="typedLetter" lang="bn"></div>
+          <div class="letter-tools">
+            <button type="button" id="letterPause" class="letter-control">Pause</button>
+            <button type="button" id="letterSkip" class="letter-control">Read full letter</button>
+          </div>
+          <button class="btn" hidden="" id="showVideo" style="margin-top:26px">There's something else I want to tell you ↗</button>
+        </div>
+        <div class="video-wrap" id="videoWrap">
+          <div class="video-placeholder" id="videoPlaceholder">♡ Your birthday video will appear here once you add <strong>assets/birthday-message.mp4</strong>.</div>
+          <video controls="" id="birthdayVideo" playsinline="" style="display:none"><source src="assets/birthday-message.mp4" type="video/mp4"/>Your browser does not support video.</video>
+        </div>
+      </div>
+    </div>
+    <!-- FUTURE MARRIAGE PROMISE -->
+    <div aria-labelledby="promiseTitle" aria-modal="true" class="modal" id="promiseModal" role="dialog">
+      <div class="modal-card">
+        <button aria-label="Close promise" class="close" id="closePromise">×</button>
+        <span class="eyebrow">A promise for our future</span>
+        <h2 id="promiseTitle">When the distance ends ♡</h2>
+        <div class="promise-copy">My Bibijan,
+
+One day, this distance will only be a memory we look back on together. One day, there will be no airport goodbyes, no time difference, and no waiting for a screen to light up.
+
+When that day comes, I promise to keep choosing you in the little things and the big things — in quiet mornings, in hard days, in laughter, in prayer, and in every dream we build side by side.
+
+I promise that our love story will not end with distance. It will become a home, a marriage, and a life we finally get to share together.
+
+Until then, keep this promise with you: I am still walking toward our forever, and I will keep walking until I reach you.</div>
+        <div class="promise-signature">Forever yours, Fizz ♡</div>
+      </div>
+    </div>
+    <!-- BIRTHDAY LETTER TEXT / search for const letter -->
+    <script>
+const progress = document.getElementById('progress'); function onScroll() { let d = document.documentElement; progress.style.width = (100 * scrollY / Math.max(1, d.scrollHeight - innerHeight)) + '%' } addEventListener('scroll', onScroll, { passive: true }); onScroll();
+const observer = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target) } }), { threshold: .09 }); document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const letter = `আমার প্রিয় বিবিজান,
+তোমারে অনেক কথা বলিবার আছে। কিন্তু কোথা হইতে আরম্ভ করিব, তাহা ভাবিতে গিয়া আজ বহুদিন আগেকার একটি সন্ধ্যার কথা মনে পড়িল।
+অবশ্য, তাহারও আগে আমাদের পরিচয়।
+২০২০ সালের কথা। তোমাকে কয়েকটি কথা লিখিয়াছিলাম। তুমিও উত্তর দিয়াছিলে। তারপর একদিন আর কথা হইল না।
+তখন তোমার কথা বিশেষ ভাবিয়াছিলাম কি না, আজ আর মনে নাই। কিন্তু এতটুকু মনে আছে, পরের বৎসর পরীক্ষার মধ্যে হঠাৎ তোমার বার্তা পাইয়া বেশ আনন্দ হইয়াছিল।
+সেই আনন্দ যে একদিন আমার জীবনের এতখানি জুড়িয়া থাকিবে, তাহা তখন বুঝি নাই।
+ক্রমে আমাদের কথা বাড়িল। একদিন তোমাকে আমার মনের কথাও জানাইলাম। অথচ তখনও তোমার সহিত আমার দেখা হয় নাই।
+তারপর সেই ১৬ ডিসেম্বর, ২০২১।
+কলেজের সম্মুখে প্রথম তোমার সাথে সাক্ষাত ।
+কী কথা বলিয়াছিলাম, কতক্ষণ তোমার পাশে ছিলাম, সকল কথা আজ মনে নাই। কিন্তু তোমাকে প্রথম দেখিবার সেই অনুভূতিটুকু আজও মনে আছে।
+কয়েকদিন পর কুটুমবাড়ি রেস্তোরাঁয় তোমাকে একটি আংটি দিয়াছিলাম।
+আংটিখানি সামান্য ছিল। হয়তো তোমাকে দেওয়ার মতো সুন্দর কিছু কিনিবার সামর্থ্যও তখন আমার ছিল না।
+কিন্তু তোমাকে আমার জীবনে চাহিবার ইচ্ছাটুকু সেদিনও আজকের মতোই সত্য ছিল।
+প্রিয় আর্থি ,
+আমাদের সেই ২০২২ সালের দিনগুলি বড় মনে পড়ে।
+কুষ্টিয়ার পথে রিকশায় চড়িয়া ঘুরিয়া বেড়ানো, নদীর ধারে পাশাপাশি বসিয়া থাকা, আর সকলের অগোচরে তোমার সহিত দেখা করিবার সেই ছোট ছোট আয়োজন।
+নদীর তীরে সেই বেঞ্চখানিতে বসিয়া আমরা কত কথা বলিয়াছিলাম! কত কথাই হয়তো আজ ভুলিয়া গিয়াছি।
+কিন্তু মাঝে মাঝে ইচ্ছা করে, আবার যদি সেইখানে তোমার পাশে বসিতে পারিতাম।
+সেদিনের মতো।
+কোনো তাড়া থাকিত না। কোথাও যাইবার সময় হইয়া আসিত না। তোমাকে বিদায় দিবার কথাও ভাবিতে হইত না।
+আর সেই সন্ধ্যা, যেদিন তোমাদের বাড়িতে গিয়াছিলাম।
+তোমার পরিবারের সহিত প্রথম পরিচয় হইল। তোমাকে প্রথমবারের মতো আমার বাহুর মধ্যে পাইয়াছিলাম।
+সেই মুহূর্তটির কথা তোমাকে নতুন করিয়া বলিবার প্রয়োজন নাই। তুমি তো সেখানেই ছিলে।
+শুধু বলি, আজও তাহা আমার অতি প্রিয় একটি স্মৃতি।
+তারপর আসিল ২০২৩ সালের ১৫ই মে।
+আমি জাপানে চলিয়া আসিলাম।
+নতুন দেশ, নতুন জীবন। চারিদিকে কত অপরিচিত মানুষ, কত অচেনা পথ।
+প্রথম প্রথম সবকিছুই দেখিতে ভালো লাগিত। কিন্তু কিছুদিন পর বুঝিলাম, সুন্দর কিছু দেখিলে তোমার কথা মনে পড়ে। আনন্দের কোনো সংবাদ থাকিলে তোমাকেই আগে জানাইতে ইচ্ছা করে। আর দিনশেষে, যত কথাই হউক, তোমার অভাবটুকু কিছুতেই পূরণ হয় না।
+এই কয়েক বৎসরে আমি অনেক পথ চলিয়াছি, আর্থি ।
+অনেক সুন্দর বিকেল কাটিয়াছি। অনেক নতুন জায়গা দেখিয়াছি। কখনো নদীর পাশে, কখনো সমুদ্রের তীরে দাঁড়াইয়া সন্ধ্যা নামিতে দেখিয়াছি।
+কিন্তু কতবার যে মনে হইয়াছে, তুমি থাকিলে এই বিকেলখানি আরও সুন্দর হইত।
+আমি তোমার সহিত এই পৃথিবীর অনেক কিছু দেখিতে চাই।
+তবে আজকাল বড় বড় স্বপ্নের চেয়েও ছোট ছোট কিছু ইচ্ছা আমাকে বেশি ভাবায়।
+তোমার সহিত একদিন সকালে কষা গরুর গোস্ত আর খেচুরি খাইতে  চাই। বৃষ্টির দিনে একই জানালার পাশে বসিয়া চা পান করিতে চাই। কাজ শেষে বাড়ি ফিরিয়া তোমার কোলে  সারাদিনের ক্লান্তি তাড়াইতে চাই ।
+এমনকি কোনো এক অলস বিকেলে, কোনো কথা না বলিয়াও, কেবল তোমার পাশে বসিয়া থাকিতে চাই।
+যে দিনগুলিকে অন্যেরা সাধারণ বলিয়া মনে করে, তোমার সহিত সেই দিনগুলিই আমার কাটাইবার বড় সাধ।
+২০২৪ সালে আমার পরিবারের নিকট যখন তোমার কথা বলিলাম, তাহারা প্রথমে বেশ অবাক হইয়াছিল। তারপর তোমাকে দেখিয়া আনন্দিত হইল।
+আমারও বড় ভালো লাগিয়াছিল।
+এতদিন যে মানুষটির কথা আমার মনে মনে ছিল, তাঁহার কথা আজ আমার আপনজনেরাও জানিল।
+আর ২০২৫ সালের প্রহেলা  এপ্রিল।
+আমি জাপানে, তুমি বাংলাদেশে। আমার পরিবার তোমাদের বাড়িতে গিয়াছিল। দূরে বসিয়াও আমাদের বাগ্‌দানের সেই আনন্দটুকু তোমাদের সহিত ভাগ করিয়া লইয়াছিলাম।
+মনে আছে, একদিন কত গোপনে তোমার সহিত দেখা করিতাম।
+আর আজ তুমি আমার হবু স্ত্রী।
+সময় কত নিঃশব্দে আমাদের এখানে লইয়া আসিয়াছে, তাই না?
+আমার বিবিজান ,
+আজ তোমার জন্মদিন।
+আজ তোমার পাশে থাকিতে পারিলে কতই না ভালো লাগিত। তোমার হাতখানি ধরিয়া তোমাকে শুভ জন্মদিন বলিতে পারিলে হয়তো এত দীর্ঘ চিঠির প্রয়োজনও হইত না।
+কিন্তু এবারের অপেক্ষাটি আমার নিকট অন্যরকম।
+কারণ শীঘ্রই, ইনশাআল্লাহ, আসিব ফিরে তোমার কাছে ।
+আমি জানি, বিবাহের পর আমাদের জীবন সর্বদা এই চিঠির মতো সুন্দর হইবে না। সংসারের দায়িত্ব থাকিবে, ক্লান্তি থাকিবে, কখনো হয়তো সামান্য অভিমানও হইবে।
+তবুও, সেই জীবনটির জন্যই আমি অপেক্ষা করিয়া আছি।
+তোমার সুখের দিনে যেমন তোমার পাশে থাকিতে চাই, তেমনি তোমার মন খারাপের দিনেও। তোমার কথা শুনিতে চাই, তোমাকে বুঝিতে চাই। তোমার সঙ্গে মিলিয়া আমাদের ছোট্ট সংসারখানি গড়িয়া তুলিতে চাই।
+আমি তোমাকে কোনো নিখুঁত জীবনের প্রতিশ্রুতি দিতে পারি না।
+শুধু এইটুকু বলিতে পারি, তোমার সঙ্গে যে জীবনটি আরম্ভ করিতে যাইতেছি, তাহার যত্ন লইতে আমি আমার সাধ্যমতো চেষ্টা করিব।
+আর কোনো একদিন, বহু বৎসর পর, হয়তো আমরা আবার কুষ্টিয়ার সেই গড়াই নদীর ধারে গিয়া বসিব।
+তখন আমাদের আর বাড়ি ফিরিবার তাড়া থাকিবে না।
+কথায় কথায় হয়তো সেই পুরোনো দিনগুলির কথা উঠিবে। সেই প্রথম বার্তা, সেই ছোট্ট আংটি, আর দূরদেশে বসিয়া কাটানো এতগুলি বৎসর।
+আমি তোমার দিকে চাহিয়া হয়তো হাসিয়া বলিব—
+মনে আছে, বিবিজান? একদিন এইরকম একটি বিকেলের জন্য আমরা কত অপেক্ষা করিয়াছিলাম।
+প্রিয়তমা, তোমার জন্মদিনে আল্লাহর কাছে আমার প্রার্থনা, তিনি যেন তোমাকে সুস্থ রাখেন, আনন্দে রাখেন। আমাদের ভালোবাসায় বরকত দান করেন এবং আমাদের একত্রে একটি শান্তিময় জীবন কাটাইবার সুযোগ দেন।
+শুভ জন্মদিন, আমার বিবিজান।
+এতদিন তোমাকে বলিয়াছি, ভালো থাকিও।
+আর কিছুদিন পর, ইনশাআল্লাহ, তোমার পাশে থাকিয়াই তোমাকে ভালো রাখিবার চেষ্টা করিব।
+সেই দিনের প্রতীক্ষায় রইলাম।
+ইতি,
+তোমারই মুস্তাফিজ ।`;
+// BIRTHDAY LETTER: antique envelope and sentence-by-sentence reveal.
+const modal = document.getElementById('letterModal'), typed = document.getElementById('typedLetter'), videoBtn = document.getElementById('showVideo'), wrap = document.getElementById('videoWrap');
+const envelope = document.getElementById('letterEnvelope'), paper = document.getElementById('letterPaper');
+const pauseLetter = document.getElementById('letterPause'), skipLetter = document.getElementById('letterSkip');
+const letterCard = modal.querySelector('.modal-card');
+// Preserve every character, punctuation mark and newline in the original Bengali text.
+const letterSentences = letter.match(/[^।!?\n]+[।!?]*[^\S\n]*|[।!?]+[^\S\n]*|\n+/gu) || [letter];
+let typingTimer = null, envelopeTimer = null, previousFocus = null, sentenceIndex = 0, letterPaused = false;
+function finishTyping() {
+  clearTimeout(typingTimer);
+  typed.textContent = letter;
+  pauseLetter.hidden = true; skipLetter.hidden = true;
+  videoBtn.hidden = false;
+}
+function revealSentence() {
+  if (letterPaused || !modal.classList.contains('open')) return;
+  if (sentenceIndex >= letterSentences.length) { finishTyping(); return; }
+  const chunk = letterSentences[sentenceIndex++];
+  const span = document.createElement('span');
+  span.className = 'letter-sentence'; span.textContent = chunk;
+  const nearBottom = letterCard.scrollHeight - letterCard.scrollTop - letterCard.clientHeight < 120;
+  typed.appendChild(span);
+  if (nearBottom && sentenceIndex > 3) letterCard.scrollTo({top:letterCard.scrollHeight, behavior:'smooth'});
+  const delay = chunk.trim() ? Math.max(1700, Math.min(5200, chunk.trim().split(/\s+/u).length * 330)) : 0;
+  typingTimer = setTimeout(revealSentence, delay);
+}
+function showLetterPaper() {
+  envelope.hidden = true; paper.hidden = false;
+  letterCard.scrollTop = 0;
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) { finishTyping(); return; }
+  revealSentence();
+}
+function openModal() {
+  clearTimeout(typingTimer); clearTimeout(envelopeTimer);
+  previousFocus = document.activeElement; modal.classList.add('open'); document.body.style.overflow = 'hidden';
+  typed.textContent = ''; wrap.classList.remove('visible'); videoBtn.hidden = true;
+  sentenceIndex = 0; letterPaused = false; pauseLetter.hidden = false; skipLetter.hidden = false; pauseLetter.textContent = 'Pause';
+  paper.hidden = true; envelope.hidden = false; letterCard.scrollTop = 0;
+  envelope.classList.remove('unseal'); void envelope.offsetWidth;
+  document.getElementById('closeModal').focus();
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) { showLetterPaper(); return; }
+  envelope.classList.add('unseal'); envelopeTimer = setTimeout(showLetterPaper, 2700);
+}
+function closeModal() {
+  clearTimeout(typingTimer); clearTimeout(envelopeTimer);
+  modal.classList.remove('open'); document.body.style.overflow = '';
+  document.getElementById('birthdayVideo').pause(); previousFocus?.focus();
+}
+pauseLetter.addEventListener('click', () => {
+  letterPaused = !letterPaused; pauseLetter.textContent = letterPaused ? 'Resume' : 'Pause';
+  clearTimeout(typingTimer); if (!letterPaused) revealSentence();
+});
+skipLetter.addEventListener('click', finishTyping);
+document.getElementById('openGift').addEventListener('click', openModal); document.getElementById('openGiftBtn').addEventListener('click', openModal); document.getElementById('closeModal').addEventListener('click', closeModal); modal.addEventListener('click', e => { if (e.target === modal) closeModal() }); addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); if (e.key === 'Tab' && modal.classList.contains('open')) { const f = Array.from(modal.querySelectorAll('button:not([hidden]),video[controls]')).filter(x => x.offsetParent !== null); if (f.length) { let first = f[0], last = f[f.length - 1]; if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus() } else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() } } } });
+videoBtn.addEventListener('click', () => { wrap.classList.add('visible'); videoBtn.hidden = true; wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' }) }); const video = document.getElementById('birthdayVideo'); video.addEventListener('loadedmetadata', () => { video.style.display = 'block'; document.getElementById('videoPlaceholder').style.display = 'none' });
+    </script>
+    <!-- PHOTO VIEWER -->
+    <div class="photo-modal" id="photoModal" role="dialog" aria-modal="true" aria-label="Memory photo" hidden>
+      <button class="photo-close" id="photoClose" aria-label="Close photo">×</button>
+      <figure>
+        <img id="photoFull" alt="A shared memory"/>
+        <figcaption id="photoCaption">Our memory ♡</figcaption>
+      </figure>
+      <button id="photoPrev" class="photo-arrow photo-prev" aria-label="Previous memory">‹</button>
+      <button id="photoNext" class="photo-arrow photo-next" aria-label="Next memory">›</button>
+    </div>
+    <script id="v7-script">
+(function() {
+  const tiles = Array.from(document.querySelectorAll('.memory-tile'));
+  const lightbox = document.getElementById('photoModal');
+  const full = document.getElementById('photoFull');
+  const caption = document.getElementById('photoCaption');
+  let current = -1, previous = null;
+  tiles.forEach(tile => {
+    const image = tile.querySelector('img');
+    const exists = () => { tile.classList.add('has-photo'); tile.setAttribute('aria-disabled', 'false') };
+    image.addEventListener('load', exists, { once: true });
+    image.addEventListener('error', () => { tile.classList.remove('has-photo'); tile.setAttribute('aria-disabled', 'true') }, { once: true });
+    if (image.complete && image.naturalWidth > 0) exists();
+    tile.addEventListener('click', () => { if (!tile.classList.contains('has-photo')) return; openPhoto(tiles.indexOf(tile)) });
+  });
+  function validIndices() { return tiles.map((t, i) => t.classList.contains('has-photo') ? i : -1).filter(i => i >= 0) }
+  function openPhoto(i) { if (i < 0 || !tiles[i]?.classList.contains('has-photo')) return; current = i; previous = document.activeElement; full.src = tiles[i].querySelector('img').src; full.alt = tiles[i].querySelector('img').alt; caption.textContent = `${tiles[i].dataset.year} · Memory ${tiles[i].dataset.photo} ♡`; lightbox.hidden = false; document.body.style.overflow = 'hidden'; document.getElementById('photoClose').focus() }
+  function closePhoto() { lightbox.hidden = true; full.removeAttribute('src'); document.body.style.overflow = ''; previous?.focus() }
+  function stepPhoto(delta) { const v = validIndices(); const pos = v.indexOf(current); if (pos < 0 || !v.length) return; openPhoto(v[(pos + delta + v.length) % v.length]) }
+  document.getElementById('photoClose').addEventListener('click', closePhoto);
+  document.getElementById('photoPrev').addEventListener('click', () => stepPhoto(-1));
+  document.getElementById('photoNext').addEventListener('click', () => stepPhoto(1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closePhoto() });
+  addEventListener('keydown', e => { if (lightbox.hidden) return; if (e.key === 'Escape') closePhoto(); if (e.key === 'ArrowRight') stepPhoto(1); if (e.key === 'ArrowLeft') stepPhoto(-1) });
+  // Load a personal video only when the user adds the file; never autostart it.
+  const birthdayVideo = document.getElementById('birthdayVideo');
+  birthdayVideo?.addEventListener('error', () => { document.getElementById('videoPlaceholder').style.display = 'block' });
+  // When modal closes, ensure video playback stops.
+  document.getElementById('closeModal')?.addEventListener('click', () => birthdayVideo?.pause());
+})();
+    </script>
+    <!-- PHOTO AND VIDEO VIEWER -->
+    <div class="vault-viewer" id="vaultViewer" role="dialog" aria-modal="true" aria-label="View a memory" hidden>
+      <button class="viewer-close" id="vaultClose" aria-label="Close memory">×</button>
+      <div id="vaultViewerContent"></div>
+      <div class="viewer-caption" id="vaultCaption"></div>
+      <div class="viewer-arrows"><button type="button" id="vaultPrevious">← Previous</button><button type="button" id="vaultNext">Next →</button></div>
+    </div>
+    <script src="assets/our-gallery/gallery.js"></script>
+    <script id="v8-script">
+(() => {
+  const pick = document.getElementById('vaultPick'), grid = document.getElementById('vaultMedia'), empty = document.getElementById('vaultEmpty');
+  const viewer = document.getElementById('vaultViewer'), content = document.getElementById('vaultViewerContent'), caption = document.getElementById('vaultCaption');
+  let items = [], position = 0, previousFocus = null;
+  const safePath = p => typeof p === 'string' && /^assets\/our-gallery\/[\w.() _-]+$/i.test(p);
+  const permanent = Array.isArray(window.STORY_GALLERY) ? window.STORY_GALLERY.filter(x => x && safePath(x.src) && (x.type === 'photo' || x.type === 'video')).map(x => ({ ...x, name: x.name || x.src.split('/').pop() })) : [];
+  items.push(...permanent);
+  function render() {    
+grid.replaceChildren(); empty.hidden = items.length > 0; const frag = document.createDocumentFragment(); items.forEach((item, i) => {
+      const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'vault-card'; btn.setAttribute('aria-label', 'View ' + item.name);
+      if (item.type === 'video') { const v = document.createElement('video'); v.src = item.src; v.muted = true; v.preload = 'metadata'; v.playsInline = true; btn.appendChild(v); const b = document.createElement('span'); b.className = 'vault-video-badge'; b.textContent = '▶ Video'; btn.appendChild(b) }
+      else { const img = document.createElement('img'); img.src = item.src; img.alt = item.name; img.loading = 'lazy'; btn.appendChild(img) }
+      const label = document.createElement('span'); label.className = 'vault-tag'; label.textContent = item.name; btn.appendChild(label); btn.addEventListener('click', () => open(i)); frag.appendChild(btn);
+    }); grid.appendChild(frag)  
+}
+  function open(i) { if (!items.length) return; position = (i + items.length) % items.length; previousFocus = document.activeElement; show(); viewer.hidden = false; document.body.style.overflow = 'hidden'; document.getElementById('vaultClose').focus() }
+  function show() { const item = items[position]; content.replaceChildren(); let media; if (item.type === 'video') { media = document.createElement('video'); media.src = item.src; media.controls = true; media.playsInline = true; media.preload = 'metadata' } else { media = document.createElement('img'); media.src = item.src; media.alt = item.name } content.appendChild(media); caption.textContent = `${position + 1} / ${items.length} · ${item.name}` }
+  function step(delta) { position = (position + delta + items.length) % items.length; const v = content.querySelector('video'); v?.pause(); show() }
+  function close() { const v = content.querySelector('video'); v?.pause(); viewer.hidden = true; content.replaceChildren(); document.body.style.overflow = ''; previousFocus?.focus() }
+  pick.addEventListener('change', () => { Array.from(pick.files || []).filter(f => f.type.startsWith('image/') || f.type.startsWith('video/')).forEach(file => { items.push({ type: file.type.startsWith('video/') ? 'video' : 'photo', src: URL.createObjectURL(file), name: file.name }) }); render(); pick.value = '' });
+  document.getElementById('vaultClose').addEventListener('click', close); document.getElementById('vaultPrevious').addEventListener('click', () => step(-1)); document.getElementById('vaultNext').addEventListener('click', () => step(1)); viewer.addEventListener('click', e => { if (e.target === viewer) close() });
+  document.addEventListener('keydown', e => { if (viewer.hidden) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1) });
+  render();
+})();
+    </script>
+    <!-- LOVE COUNTER, STARS AND PROMISE LOGIC -->
+    <script id="v10-upgrades">
+(() => {
+  const startDate = new Date('2021-12-16T00:00:00');
+  const dayEl = document.getElementById('loveDays');
+  const yearEl = document.getElementById('loveYears');
+  const monthEl = document.getElementById('loveMonths');
+  const hourEl = document.getElementById('loveHours');
+  function updateCounter() {
+    const now = new Date();
+    const ms = now - startDate;
+    const days = Math.max(0, Math.floor(ms / 86400000));
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    if (now.getDate() < startDate.getDate()) months -= 1;
+    if (months < 0) { years -= 1; months += 12; }
+    dayEl.textContent = days.toLocaleString();
+    yearEl.textContent = Math.max(0, years);
+    monthEl.textContent = Math.max(0, months);
+    hourEl.textContent = String(now.getHours()).padStart(2, '0');
+  }
+  updateCounter();
+  setInterval(updateCounter, 60000);
+
+  const skyFizz = document.getElementById('skyFizz');
+  const skyArthi = document.getElementById('skyArthi');
+  const skyMessage = document.getElementById('skyMessage');
+  function activateSky() {
+    skyFizz.classList.add('active');
+    skyArthi.classList.add('active');
+    skyMessage.textContent = 'Different skies, one future. ♡';
+  }
+  [skyFizz, skyArthi].forEach(btn => btn?.addEventListener('click', activateSky));
+
+  const promiseModal = document.getElementById('promiseModal');
+  const openPromise = document.getElementById('openPromise');
+  const closePromise = document.getElementById('closePromise');
+  let prevFocus = null;
+  function showPromise() { prevFocus = document.activeElement; promiseModal.classList.add('open'); document.body.style.overflow = 'hidden'; closePromise.focus(); }
+  function hidePromise() { promiseModal.classList.remove('open'); document.body.style.overflow = ''; prevFocus?.focus(); }
+  openPromise?.addEventListener('click', showPromise);
+  closePromise?.addEventListener('click', hidePromise);
+  promiseModal?.addEventListener('click', e => { if (e.target === promiseModal) hidePromise(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && promiseModal?.classList.contains('open')) hidePromise(); });
+})();
+    </script>
+    <!-- BACKGROUND MUSIC LOGIC -->
+    <script id="v9-background-music">
+(() => {
+  const audio = document.getElementById('storySoundtrack');
+  const intro = document.getElementById('musicIntro');
+  const dock = document.getElementById('musicDock');
+  const toggle = document.getElementById('musicToggle');
+  const state = document.getElementById('musicState');
+  const volume = document.getElementById('musicVolume');
+  const error = document.getElementById('musicStartupError');
+  let wantsMusic = false;
+  let interruptedByVideo = false;
+  audio.volume = .4;
+  function videoIsPlaying() { return Array.from(document.querySelectorAll('video')).some(v => !v.paused && !v.ended); }
+  function display() {
+    const playing = !audio.paused;
+    toggle.textContent = playing ? 'Ⅱ' : '▶';
+    toggle.setAttribute('aria-label', playing ? 'Pause background music' : 'Play background music');
+    state.textContent = playing ? 'Playing' : (interruptedByVideo && wantsMusic ? 'Paused for video' : 'Paused');
+  }
+  async function startMusic() {
+    wantsMusic = true;
+    if (videoIsPlaying()) { interruptedByVideo = true; display(); return; }
+    try { await audio.play(); interruptedByVideo = false; error.textContent = ''; } catch (e) {
+      // Some browser modes decline playback; do not block the story.
+      error.textContent = 'Music could not start automatically. Use the play button to try again.';
+    }
+    display();
+  }
+  function enter(withMusic) {
+    intro.hidden = true; dock.hidden = false;
+    if (withMusic) { startMusic() } else { wantsMusic = false; audio.pause(); display() }
+    document.querySelector('.hero')?.scrollIntoView({ block: 'start' });
+  }
+  document.getElementById('beginMusic').addEventListener('click', () => enter(true));
+  document.getElementById('beginSilent').addEventListener('click', () => enter(false));
+  toggle.addEventListener('click', () => {
+    if (audio.paused) { startMusic() } else { wantsMusic = false; interruptedByVideo = false; audio.pause(); display() }
+  });
+  volume.addEventListener('input', () => { audio.volume = Number(volume.value) / 100 });
+  audio.addEventListener('play', display); audio.addEventListener('pause', display);
+  audio.addEventListener('error', () => { state.textContent = 'Audio unavailable'; error.textContent = 'Could not load the music file.' });
+  // Capture all videos, including videos added dynamically by the memories viewer.
+  document.addEventListener('play', ev => {
+    if (ev.target?.tagName !== 'VIDEO') return;
+    if (!audio.paused) { interruptedByVideo = true; audio.pause() }
+    display();
+  }, true);
+  function onVideoStop() {
+    // A queued pause can happen while switching videos: settle after the switch.
+    setTimeout(() => {
+      if (videoIsPlaying()) return;
+      if (interruptedByVideo && wantsMusic) { interruptedByVideo = false; startMusic() }
+      else display();
+    }, 120);
+  }
+  document.addEventListener('pause', ev => { if (ev.target?.tagName === 'VIDEO') onVideoStop() }, true);
+  document.addEventListener('ended', ev => { if (ev.target?.tagName === 'VIDEO') onVideoStop() }, true);
+  display();
+})();
+    </script>
+  </body>
+</html>
